@@ -8,13 +8,16 @@ import android.net.Uri;
 public class Contact {
     private String _name, _phone, _email, _address;
     private Uri _imageURI;
-    public Contact(String name, String phone, String email, String address, Uri ImageURI){
+    private int _id;
+    public Contact(int id, String name, String phone, String email, String address, Uri ImageURI){
+        _id=id;
         _name=name;
         _phone = phone;
         _email = email;
         _address = address;
         _imageURI= ImageURI;
     }
+    public int getId(){ return _id; }
     public String getName(){
         return _name;
     }
